@@ -168,7 +168,7 @@ function _update()
 		rectfill(0,0,127,7,13)
 		spr(16,0,0,2,2)
 		spr(18,16,0)
-		print("netexplore 1.6.0",17,9,7)
+		print("netexplore 1.6.1",17,9,7)
 		if loading==2 then
 			print(loading,25,2,1)
 			print(get[2],30,2,1)
@@ -230,7 +230,7 @@ function _update()
 				sfx(3)
 			end
 			if barea(25,0,6,8) then
-				sorr="send" dsettext(url) loading=1 cache={} scl=0
+				sorr="send" dsettext(url) loading=1 cache={} scl=0 bnav=true
 			end
 			if barea(25+6,0,6,8) and visited[pvisited-1] then
 				sorr="send" dsettext(visited[pvisited-1]) loading=1 cache={} scl=0
