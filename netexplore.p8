@@ -168,7 +168,7 @@ function _update()
 		rectfill(0,0,127,7,13)
 		spr(16,0,0,2,2)
 		spr(18,16,0)
-		print("netexplore 1.5.4",17,9,7)
+		print("netexplore 1.5.5",17,9,7)
 		if loading==2 then
 			print(loading,25,2,1)
 			print(get[2],30,2,1)
@@ -210,7 +210,7 @@ function _update()
 				 "txt|0|102|7|run netexplore_server.py",
 				 "txt|0|108|7|alongside pico-8.",
 				 --https://github.com/thetoaster2012-ai/netexplore
-				 "hyp|0|114|7|https://github.com/thetoaster2012-ai/netexplore|https://github.com/thetoaster2012-ai/netexplore"
+				 "hyp|0|114|7|https://github.com/thetoaster2012-ai/netexplore|https://github.com/thetoaster2012-ai/netexplore",
 				 "txt|0|130|13|vimnotkeepingtrackofthat - 2026",
 				}
 			end
