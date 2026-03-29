@@ -168,7 +168,7 @@ function _update()
 		rectfill(0,0,127,7,13)
 		spr(16,0,0,2,2)
 		spr(18,16,0)
-		print("netexplore 1.5.8",17,9,7)
+		print("netexplore 1.5.9",17,9,7)
 		if loading==2 then
 			print(loading,25,2,1)
 			print(get[2],30,2,1)
@@ -219,7 +219,7 @@ function _update()
 				scl=0
 				cache={"bgc|1","txt|0|0|7|history:"}
 				for i=1,#history do
-					add(cache,"hyp|0|"..tostr(i*6)..history[i]..history[i])
+					add(cache,"hyp|0|"..tostr(i*6).."|"..history[i].."|"..history[i])
 				end
 			end
 			print(url,26+18,1,7)
