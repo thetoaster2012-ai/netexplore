@@ -168,7 +168,7 @@ function _update()
 		rectfill(0,0,127,7,13)
 		spr(16,0,0,2,2)
 		spr(18,16,0)
-		print("netexplore 1.5.6",17,9,7)
+		print("netexplore 1.5.7",17,9,7)
 		if loading==2 then
 			print(loading,25,2,1)
 			print(get[2],30,2,1)
@@ -223,7 +223,7 @@ function _update()
 				end
 			end
 			print(url,26+18,1,7)
-			if barea(25+24,-1,127-25-24,8) then
+			if barea(25+18,-1,127-25-18,8) then
 				scene=2
 				--cur=0
 				sfx(3)
