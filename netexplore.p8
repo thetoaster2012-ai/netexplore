@@ -80,7 +80,7 @@ scene=1
 vx,vy,vw,vh=25,-1,127-25,8
 url=""
 history={}
-visited={}
+visited={"search"}
 pvisited=1
 bnav=false
 function _update()
@@ -102,11 +102,11 @@ function _update()
 				sfx(2)
 				isin=false
 				for hi=1,#history do
-					if url==history[hi] then
+					if visited[pvisited]==history[hi] then
 						isin=true
 					end
 				end
-				if not isin then add(history,url) end
+				if not isin then add(history,visited[pvisited]) end
 				if not bnav then
 					add(visited,url)
 					pvisited=pvisited+1 
@@ -168,7 +168,7 @@ function _update()
 		rectfill(0,0,127,7,13)
 		spr(16,0,0,2,2)
 		spr(18,16,0)
-		print("netexplore 1.5.9",17,9,7)
+		print("netexplore 1.6.0",17,9,7)
 		if loading==2 then
 			print(loading,25,2,1)
 			print(get[2],30,2,1)
@@ -222,9 +222,10 @@ function _update()
 					add(cache,"hyp|0|"..tostr(i*6).."|"..history[i].."|"..history[i])
 				end
 			end
-			print(url,26+18,1,7)
+			print(visited[pvisited],26+18,1,7)
 			if barea(25+18,-1,127-25-18,8) then
 				scene=2
+				url=visited[pvisited]
 				--cur=0
 				sfx(3)
 			end
@@ -264,7 +265,7 @@ function _update()
 				url=url..k
 			end
 		end
-		if url=="" then
+		if url=="" or url==visited[pvisited] then
 			spr(22,127-8,vy+vh-8)
 			if barea(127-8,129-8,7,6) or k=="\r" then scene=1 sfx(4) end
 		else
